@@ -8,7 +8,7 @@ export interface IBusinessFees {
 
 export class Worker implements IBusinessFees{
 
-    protected static FEES_RATE: number = 80; // €
+    protected static FEES_RATE: number = 80; //€
 
     constructor(
         public id = 0,
