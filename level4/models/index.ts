@@ -4,4 +4,4 @@ export * from './worker.model';
 export * from './shift.model';
 export * from './report';
 export * from './worker-status-rate.enum';
-export * from './worker-status.enum';
+export * from './worker-interim.model';
