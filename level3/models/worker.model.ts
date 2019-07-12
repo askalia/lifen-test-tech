@@ -1,6 +1,4 @@
-import { WorkerStatusRate } from './worker-status-rate.enum';
-
-type WorkerStatus = keyof typeof WorkerStatusRate;
+import { WorkerStatus } from './index';
 
 export class Worker {
 

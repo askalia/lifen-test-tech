@@ -1,4 +1,4 @@
-import { WorkerStatusRate, WorkerStatus } from './index';
+import { WorkerStatus } from './index';
 
 export class Worker {
 

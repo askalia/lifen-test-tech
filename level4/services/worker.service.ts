@@ -1,4 +1,4 @@
-import { Worker, WorkerStatus, WorkerStatusRate } from "../models";
+import { Worker, getWorkerStatusRate } from "../models";
 
 let _instance: WorkerService;
 
@@ -12,6 +12,6 @@ export class WorkerService {
     }
 
     public getApplicableRate(worker: Worker): number{
-        return +WorkerStatusRate[worker.status.toUpperCase()];
+        return getWorkerStatusRate(worker.status);
     }
 }

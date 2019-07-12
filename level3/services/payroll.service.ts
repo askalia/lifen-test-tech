@@ -1,4 +1,4 @@
-import { Shift, Worker, WorkerStatus, WorkerStatusRate } from "../models";
+import { Shift, Worker, WorkerStatus, getWorkerStatusRate } from "../models";
 
 let _instance: PayrollService;
 
@@ -28,7 +28,7 @@ export class PayrollService {
     }
 
     private _getApplicableRate(workerStatus: WorkerStatus): number{
-        return parseFloat(WorkerStatusRate[workerStatus.toUpperCase()] || 0);
+        return getWorkerStatusRate(workerStatus);
     }
 
 }

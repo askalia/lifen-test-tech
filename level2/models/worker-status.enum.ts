@@ -1,3 +1,4 @@
-import { WorkerStatusRate } from './index';
-
-export type WorkerStatus = keyof typeof WorkerStatusRate;
+export enum WorkerStatus {
+    MEDIC = 'medic',
+    INTERNE = 'interne'
+}

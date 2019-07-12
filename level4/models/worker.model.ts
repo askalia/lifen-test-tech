@@ -1,6 +1,5 @@
-import { WorkerInterim } from './index';
+import { WorkerStatus, WorkerInterim } from './index';
 
-export type WorkerStatus = 'medic' | 'intern' | 'interim';
 
 export interface IBusinessFees {
     getFeesRate(): number    
@@ -18,7 +17,7 @@ export class Worker implements IBusinessFees{
     }
     
     static from({ id, first_name, status}: any): Worker{
-        if (status === 'interim'){
+        if (status === WorkerStatus.INTERIM){
             return new WorkerInterim(id, first_name, status);  
         }
         return new Worker(id, first_name, status);        

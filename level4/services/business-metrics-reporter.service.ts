@@ -1,4 +1,5 @@
 import { BusinessMetrics, Worker, Shift } from "../models";
+import { WorkerStatus } from '../models/worker-status.enum';
 
 export class BusinessMetricsReporter {
     
@@ -19,7 +20,7 @@ export class BusinessMetricsReporter {
         };
 
         const countInterimShifts = (_worker: Worker, _nbShiftsWorked: number): number => {
-            if (_worker.status === 'interim'){
+            if (_worker.status === WorkerStatus.INTERIM){
                 return shifts.length;
             }
             return 0;
