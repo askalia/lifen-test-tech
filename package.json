@@ -32,6 +32,7 @@
     "level2": "ts-node level2/main",
     "level3": "ts-node level3/main",
     "level4": "ts-node level4/main",
+    "level5": "ts-node app.ts",
     "test": "jasmine --config=jasmine.json --reporter=jasmine-console-reporter",
     "postinstall": "npm run test"
   },
